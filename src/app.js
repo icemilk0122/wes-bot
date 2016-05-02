@@ -4,7 +4,7 @@ import request from 'request';
 import config from '../config';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = '1234';
 const CHANNEL_ID = config.CHANNEL_ID,
 CHANNEL_SERECT = config.CHANNEL_SERECT,
 MID =config.MID;
