@@ -28,8 +28,8 @@ function sendTextMessage(sender, text) {
 
   const data = {
     to: [sender],
-    toChannel: CHANNEL_ID,
-    eventType: '138311609000106303',
+    toChannel: '1383378250',
+    eventType: '138311608800106203',
     content: {
       contentType: 1,
       toType: 1,
