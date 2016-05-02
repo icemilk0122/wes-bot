@@ -1,11 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import request from 'request';
-import config from './config';
+import config from '../config';
 
 const app = express();
 const port = process.env.PORT || 3000;
-const { CHANNEL_ID, CHANNEL_SERECT, MID } = {...config};
+const CHANNEL_ID = config.CHANNEL_ID,
+CHANNEL_SERECT = config.CHANNEL_SERECT,
+MID =config.MID;
 const LINE_API = 'https://trialbot-api.line.me/v1/events';
 
 app.use(bodyParser.json());
@@ -26,8 +28,8 @@ function sendTextMessage(sender, text) {
 
   const data = {
     to: [sender],
-    toChannel: 1383378250,
-    eventType: '138311608800106203',
+    toChannel: CHANNEL_ID,
+    eventType: '138311609000106303',
     content: {
       contentType: 1,
       toType: 1,
